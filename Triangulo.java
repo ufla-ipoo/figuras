@@ -14,8 +14,8 @@ public class Triangulo
 {
     private int altura;
     private int largura;
-    private int posX;
-    private int posY;
+    private int posicaoX;
+    private int posicaoY;
     private String cor;
     private boolean estaVisivel;
 
@@ -26,8 +26,8 @@ public class Triangulo
     {
         altura = 60;
         largura = 70;
-        posX = 210;
-        posY = 140;
+        posicaoX = 210;
+        posicaoY = 140;
         cor = "verde";
         estaVisivel = false;
     }
@@ -96,7 +96,7 @@ public class Triangulo
     public void moverHorizontal(int distancia)
     {
         apagar();
-        posX += distancia;
+        posicaoX += distancia;
         desenhar();
     }
 
@@ -106,7 +106,7 @@ public class Triangulo
     public void moverVertical(int distancia)
     {
         apagar();
-        posY += distancia;
+        posicaoY += distancia;
         desenhar();
     }
 
@@ -129,7 +129,7 @@ public class Triangulo
 
         for(int i = 0; i < distancia; i++)
         {
-            posX += passo;
+            posicaoX += passo;
             desenhar();
         }
     }
@@ -153,7 +153,7 @@ public class Triangulo
 
         for(int i = 0; i < distancia; i++)
         {
-            posY += passo;
+            posicaoY += passo;
             desenhar();
         }
     }
@@ -188,8 +188,8 @@ public class Triangulo
         {
             Tela tela = Tela.getTela();
             
-            int[] pontosX = { posX, posX + (largura/2), posX - (largura/2) };
-            int[] pontosY = { posY, posY + altura, posY + altura };
+            int[] pontosX = { posicaoX, posicaoX + (largura/2), posicaoX - (largura/2) };
+            int[] pontosY = { posicaoY, posicaoY + altura, posicaoY + altura };
             tela.desenhar(this, cor, new Polygon(pontosX, pontosY, 3));
             
             tela.esperar(10);
