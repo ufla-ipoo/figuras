@@ -1,13 +1,17 @@
-Projeto "Formas"
-Authors: Michael Kölling and David J. Barnes
-Tradução: Julio César Alves
+# Projeto `Formas`
+
+Autores: Michael Kölling and David J. Barnes
+
+- Traduzido por: Julio César Alves
 
 Este projeto é parte do material do livro
 
+```
    Objects First with Java - A Practical Introduction using BlueJ
    6ª edição
    David J. Barnes e Michael Kölling
    Pearson Education, 2017
+```
 
 É discutido no capítulo 1.
 
@@ -16,13 +20,14 @@ de objetos.
 
 Você pode criar várias formas geométricas e você verá, se você acionar,
 que as formas são desenhadas na tela (em uma janela que nós chamamos de
-"tela").
+`tela`).
 
 Você pode então manipular estes objetos: mudar suas posições, tamanhos e
 cores. Experimente: crie alguns quadrados, triângulos e círculos diferentes.
 
 Este projeto foi pensado como um primeiro exemplo de programação orientada
 a objetos.
+
 Ele ilustra os seguintes conceitos:
 
  - um projeto Java (aplicação) é uma coleção de classes
