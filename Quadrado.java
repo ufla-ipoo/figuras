@@ -13,8 +13,8 @@ import java.awt.*;
 public class Quadrado
 {
     private int tamanho;
-    private int posX;
-    private int posY;
+    private int posicaoX;
+    private int posicaoY;
     private String cor;
     private boolean estaVisivel;
 
@@ -24,8 +24,8 @@ public class Quadrado
     public Quadrado()
     {
         tamanho = 60;
-        posX = 310;
-        posY = 120;
+        posicaoX = 310;
+        posicaoY = 120;
         cor = "vermelha";
         estaVisivel = false;
     }
@@ -94,7 +94,7 @@ public class Quadrado
     public void moverHorizontal(int distancia)
     {
         apagar();
-        posX += distancia;
+        posicaoX += distancia;
         desenhar();
     }
 
@@ -104,7 +104,7 @@ public class Quadrado
     public void moverVertical(int distancia)
     {
         apagar();
-        posY += distancia;
+        posicaoY += distancia;
         desenhar();
     }
 
@@ -127,7 +127,7 @@ public class Quadrado
 
         for(int i = 0; i < distancia; i++)
         {
-            posX += passo;
+            posicaoX += passo;
             desenhar();
         }
     }
@@ -151,7 +151,7 @@ public class Quadrado
 
         for(int i = 0; i < distancia; i++)
         {
-            posY += passo;
+            posicaoY += passo;
             desenhar();
         }
     }
@@ -184,7 +184,7 @@ public class Quadrado
         if(estaVisivel) 
         {
             Tela tela = Tela.getTela();
-            tela.desenhar(this, cor, new Rectangle(posX, posY, tamanho, tamanho));
+            tela.desenhar(this, cor, new Rectangle(posicaoX, posicaoY, tamanho, tamanho));
             tela.esperar(10);
         }
     }

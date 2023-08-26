@@ -14,8 +14,8 @@ import java.awt.geom.*;
 public class Circulo
 {
     private int diametro;
-    private int posX;
-    private int posY;
+    private int posicaoX;
+    private int posicaoY;
     private String cor;
     private boolean estaVisivel;
     
@@ -25,8 +25,8 @@ public class Circulo
     public Circulo()
     {        
         diametro = 68;
-        posX = 230;
-        posY = 90;
+        posicaoX = 230;
+        posicaoY = 90;
         cor = "azul";
     }
 
@@ -94,7 +94,7 @@ public class Circulo
     public void moverHorizontal(int distancia)
     {
         apagar();
-        posX += distancia;
+        posicaoX += distancia;
         desenhar();
     }
 
@@ -104,7 +104,7 @@ public class Circulo
     public void moverVertical(int distancia)
     {
         apagar();
-        posY += distancia;
+        posicaoY += distancia;
         desenhar();
     }
 
@@ -127,7 +127,7 @@ public class Circulo
                 
         for(int i = 0; i < distancia; i++)
         {
-            posX += passo;                        
+            posicaoX += passo;                        
             desenhar();
         }
     }
@@ -151,7 +151,7 @@ public class Circulo
 
         for(int i = 0; i < distancia; i++)
         {
-            posY += passo;
+            posicaoY += passo;
             desenhar();
         }
     }
@@ -184,7 +184,7 @@ public class Circulo
         if(estaVisivel) 
         {
             Tela tela = Tela.getTela();
-            tela.desenhar(this, cor, new Ellipse2D.Double(posX, posY, diametro, diametro));
+            tela.desenhar(this, cor, new Ellipse2D.Double(posicaoX, posicaoY, diametro, diametro));
             tela.esperar(10);
         }
     }

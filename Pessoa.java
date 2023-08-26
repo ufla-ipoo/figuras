@@ -14,8 +14,8 @@ public class Pessoa
 {
     private int altura;
     private int largura;
-    private int posX;
-    private int posY;
+    private int posicaoX;
+    private int posicaoY;
     private String cor;
     private boolean estaVisivel;
 
@@ -26,8 +26,8 @@ public class Pessoa
     {
         altura = 60;
         largura = 30;
-        posX = 280;
-        posY = 190;
+        posicaoX = 280;
+        posicaoY = 190;
         cor = "preto";
         estaVisivel = false;
     }
@@ -96,7 +96,7 @@ public class Pessoa
     public void moverHorizontal(int distancia)
     {
         apagar();
-        posX += distancia;
+        posicaoX += distancia;
         desenhar();
     }
 
@@ -106,7 +106,7 @@ public class Pessoa
     public void moverVertical(int distancia)
     {
         apagar();
-        posY += distancia;
+        posicaoY += distancia;
         desenhar();
     }
 
@@ -129,7 +129,7 @@ public class Pessoa
 
         for(int i = 0; i < distancia; i++)
         {
-            posX += passo;
+            posicaoX += passo;
             desenhar();
         }
     }
@@ -153,7 +153,7 @@ public class Pessoa
 
         for(int i = 0; i < distancia; i++)
         {
-            posY += passo;
+            posicaoY += passo;
             desenhar();
         }
     }
@@ -187,8 +187,8 @@ public class Pessoa
         int ac = (int)(altura * 0.7);  // altura do corpo
         int mc = (altura - ac) / 2;  // altura de metade da cabeça
         int ml = largura / 2;  // metade da largura
-        int x = posX;
-        int y = posY;
+        int x = posicaoX;
+        int y = posicaoY;
         
         if(estaVisivel) 
         {
