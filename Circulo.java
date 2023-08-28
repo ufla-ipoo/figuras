@@ -69,7 +69,7 @@ public class Circulo
      */
     public void moverEsquerda()
     {
-        moverHorizontal(-150);
+        moverHorizontal(-20);
     }
 
     /**
